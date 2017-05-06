@@ -15,5 +15,8 @@ Quadratic time - O(n2) the run time is directly proportional to the square of th
 Logarithmic time - O(log n) a highly efficient algorithm, used by the binary search technique for example
 
 
+2.3 CONSTANT TIME
+
+
 
 

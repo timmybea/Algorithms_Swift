@@ -59,11 +59,40 @@ execTime
 //#2 Dictionary Search
 //Dictionaries use hash look up, so it should also be constant time execution.
 
-//func generateDictionary(size: Int) -> Dictionary<String, Int> {
-//    var dictionary = Dictionary<String, Int>()
-//    
-//    
-//    for
-//}
+func generateDictionary(size: Int) -> Dictionary<String, Int> {
+    var dictionary = Dictionary<String, Int>()
+    
+    guard size > 0  else {
+        return dictionary
+    }
+    
+    for i in 0..<size {
+        let key = String(i)
+        dictionary[key] = i
+    }
+
+    return dictionary
+}
+
+let smallDict = generateDictionary(size: 5)
+let medDict = generateDictionary(size: 1000)
+let largeDict = generateDictionary(size: 10000)
+
+execTime = BenchTimer.measureBlock {
+    _ = smallDict["5"]
+}
+
+execTime
+
+execTime = BenchTimer.measureBlock {
+    _ = medDict["600"]
+}
+
+execTime
+
+execTime = BenchTimer.measureBlock {
+    _ = largeDict["8000"]
+}
+
 
 

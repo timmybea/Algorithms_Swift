@@ -1,0 +1,19 @@
+1.1   WHY STUDY ALGORITHMS?
+Good base in algorithms is required to build scalable performant software
+
+The course content:
+The power of algorithms
+Big O notation - linear, logarithmic, constant and polynomial time
+Basic sorting algorithms - insertion, bubble and selection sort
+Advanced sorting algorithms - merge and quick sort
+
+2.2 BIG O NOTATION
+
+Constant time - O(1) will always execute in the same amount of time regardless of the input size.
+Linear time - O(n) the run time will grow proportionally to the growth of the input size.
+Quadratic time - O(n2) the run time is directly proportional to the square of the input size. These typically involve nested iterations over the input set. Deeper nested iterations will result in increasingly less desireable run times: Cubic time - O(n3), Quartic time - O(n4)
+Logarithmic time - O(log n) a highly efficient algorithm, used by the binary search technique for example
+
+
+
+

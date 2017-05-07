@@ -15,7 +15,13 @@ Quadratic time - O(n2) the run time is directly proportional to the square of th
 Logarithmic time - O(log n) a highly efficient algorithm, used by the binary search technique for example
 
 
-2.3 CONSTANT TIME
+2.6 Advice for O(n^k) complexity
+Wherever possible, try to avoid nested iterations (this will lead to polynomial time or worse)
+Performance testing with a benchtimer is imperative
+Look to replace nested operations with techniques outlined in the next section
+Document your algorithm thoroughly to explain why your approach works.
+
+
 
 
 

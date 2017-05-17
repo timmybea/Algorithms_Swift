@@ -52,15 +52,15 @@ func multTable(size: Int) -> [Int] {
 }
 
 
-var executeTime = BenchTimer.measureBlock {
-    _ = multTable(size: 10)
-}
-executeTime.formattedTime
-
-executeTime = BenchTimer.measureBlock {
-    _ = multTable(size: 100)
-}
-executeTime.formattedTime
+//var executeTime = BenchTimer.measureBlock {
+//    _ = multTable(size: 10)
+//}
+//executeTime.formattedTime
+//
+//executeTime = BenchTimer.measureBlock {
+//    _ = multTable(size: 100)
+//}
+//executeTime.formattedTime
 
 //executeTime = BenchTimer.measureBlock {
 //    _ = multTable(size: 1000)

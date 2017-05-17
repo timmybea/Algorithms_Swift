@@ -1,0 +1,55 @@
+Cracking the Coding Interview:
+
+VI Big O (pg 38)
+
+Electronic Transfer - O(s)
+Where s is the size of the file. The time to transfer increases with the size of the file.
+
+Airplane Transfer - O(1)
+Constant time. As thte size of the file increases the transfer time stays exactly the same.
+
+TIME COMPLEXITY
+
+Big O
+describes the longest expected runtime.
+
+Big Omega
+This is the fastest expected runtime.
+
+Big theta
+When the Big O and Big Omega are the same we can describe it as Big Theta. A tight bound on runtime.
+
+We typically deal with Big O.
+
+You can consider Big O as a best case, worst case and expected case. We rarely discuss best case because typically you could hand any algorithm an edge case and get a runtime of O(1) so it's not particularly useful.
+For many algorithms the expected and worst cases are the same.
+
+SPACE COMPLEXITY
+Time is not the only consideration. We might care a lot about the resources that are being consumed to run an algorithm.
+You can achieve the same result without accessing the stack in the same way, which means that you can demand less or more space in memory.
+
+Big O is not a concrete time indicator. Itdescribes the rate of increase. So you could have an algoritm of O(n) running faster than another of O(1) depending on the size of the input and depending how involved your one constant step is.
+
+Example:
+Algorithm 1: You traverse an array once but perform multiple operations on each element O(n).
+Algorithm 2: You traverse the array twice, but each time only perform a single operation on each element - O(2n)
+In reality, this could work out to being the same runtime despite the big O being different.
+
+Simplifying Big O: p53
+Drop the constants
+Drop the non-dominant terms
+
+Add runtimes when you have one chunk of work being performed before another chunk of work.
+"Do this - then, when you are done - do that"
+
+Multiply when you have one chunk of work nested inside another chunk of work.
+"do this - for every time that you do that"
+
+YOU ARE UP TO p55
+
+
+
+
+
+
+

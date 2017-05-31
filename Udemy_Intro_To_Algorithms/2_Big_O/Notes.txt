@@ -15,11 +15,22 @@ Quadratic time - O(n2) the run time is directly proportional to the square of th
 Logarithmic time - O(log n) a highly efficient algorithm, used by the binary search technique for example
 
 
-2.6 Advice for O(n^k) complexity
+2.6 ADVICE FOR AVOIDING (n^k) COMPLEXITY
 Wherever possible, try to avoid nested iterations (this will lead to polynomial time or worse)
 Performance testing with a benchtimer is imperative
 Look to replace nested operations with techniques outlined in the next section
 Document your algorithm thoroughly to explain why your approach works.
+
+2.7 LOGARITHMIC COMPLEXITY
+The logarithm of a number is the exponenet to which another fixed number (the base) must be raised to produce that number.
+
+logA(B) = C as A^C = B (the base is B)
+log3(9) = 2 as 3^2 = 9
+log10(1000) = 3 as 10^3 = 1000
+
+When considering Big O, we disregard the base and simply say O(log n)
+
+
 
 
 

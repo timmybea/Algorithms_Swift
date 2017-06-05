@@ -2,7 +2,7 @@
 
 import UIKit
 
-//Pair Matching: The challenge is to find two elements in an array that, when added together equal is the same as out target value.
+//Pair Matching: The challenge is to find two elements in an array that, when added together equal the same as target value.
 //eg: array: [1,2,2,3,4] target: 4 will yield the indices (0, 3) and (1, 2)
 
 

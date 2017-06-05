@@ -1,0 +1,17 @@
+SECTION 4: BASIC SORTING ALGORITHMS
+Why look at sorting algorithms. Other processes are much more efficient when you are working with ordered data sets. Studying sorting methods can also help give you tools necessary for other types of algorithms.
+
+SELECTION SORT
+selects the smallest item and swaps it with the previous one. Has a quadratic time complexity
+one of the simplest implementations
+
+INSERTION SORT
+Works by inserting elements into their proper place. To make space for the current item, larger elements must move one position to the right. Also has a quadratic worst time complexity, however this largely depends on the initial ordering of the dataset.
+
+BUBBLE SORT
+Works by repeatedly evaluating adjacent items and swapping their positions or not.
+Easy to implement, but inefficient. Both the average and worst case complexities are quadratic.
+
+
+
+

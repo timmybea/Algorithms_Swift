@@ -19,6 +19,39 @@ class BenchTimer {
     }
 }
 
+public extension CFTimeInterval {
+    public var formattedTime: String {
+        return self >= 1000 ? String(Int(self)) + "s"
+            : self >= 1 ? String(format: "%.3gs", self)
+            : self >= 1e-3 ? String(format: "%.3gms", self * 1e3)
+            : self >= 1e-6 ? String(format: "%.3gµs", self * 1e6)
+            : self < 1e-9 ? "0s"
+            : String(format: "%.3gns", self * 1e9)
+    }
+}
+
+
+    func randomArray(size: Int, maxValue: Int) -> [Int] {
+        
+        var array = [Int]()
+        
+        for _ in 0..<size {
+            array.append(Int(arc4random_uniform(UInt32(maxValue))))
+        }
+        return array
+    }
+    
+    func incrementArray(size: Int) -> [Int] {
+        var array = [Int]()
+        
+        for i in 0..<size {
+            array.append(i)
+        }
+        return array
+    }
+
+
+
 func selectionSort(_ array: [Int]) -> [Int] {
     guard array.count > 1 else {
         return array
@@ -27,27 +60,33 @@ func selectionSort(_ array: [Int]) -> [Int] {
     var copyArray = array
     
     for i in 0..<(array.count - 1) {
-        
-        var left = copyArray[i]
+
         var smallestIndex = i
         
         for j in i+1..<array.count {
-            let right = copyArray[j]
-            
-            if right < left {
+            if copyArray[j] < copyArray[smallestIndex] {
                 smallestIndex = j
-                left = copyArray[j]
             }
         }
         if smallestIndex != i {
-            let smallestValue = copyArray[smallestIndex]
-            copyArray[smallestIndex] = copyArray[i]
-            copyArray[i] = smallestValue
+            swap(&copyArray[smallestIndex], &copyArray[i])
             print(copyArray)
         }
     }
     return copyArray
 }
 
-let result = selectionSort([5, 2, 8, 4, 9, 1])
-result
+var anotherExecTime = BenchTimer.measureBlock {
+    _ = selectionSort(randomArray(size: 100, maxValue: 100))
+}
+anotherExecTime.formattedTime
+
+//execTime = BenchTimer.measureBlock {
+//    _ = selectionSort(randomArray(size: 1000, maxValue: 100))
+//}
+//execTime.formattedTime
+
+var execTime = BenchTimer.measureBlock {
+    _ = selectionSort(incrementArray(size: 100))
+}
+execTime.formattedTime

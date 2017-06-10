@@ -73,3 +73,5 @@ exec.formattedTime
 
 //Why is selection sort so much faster than insertion sort?
 //Both of these algorithms run in quadratic time, but selection sort is considerably faster as the input size increases. This is because (while selection sort makes more comparisons) it requires fewer swaps to take place. Selection sort's number of swaps grows linearly with the growth of the input whereas we have seen that insertion sort has swaps in the quadratic order. writing to memory is significantly slower than reading and so insertion sort which does more writing and less reading is slower.
+//Swift uses the insertion sort algorithm for sort function with 20 elements or less.
+
